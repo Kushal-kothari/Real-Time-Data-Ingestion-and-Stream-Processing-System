@@ -1,69 +1,60 @@
-# Realtime Data Streaming | End-to-End Data Engineering Project
+# Realtime Data Streaming Project
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [System Architecture](#system-architecture)
-- [What You'll Learn](#what-youll-learn)
-- [Technologies](#technologies)
+- [Key Features](#key-features)
+- [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Watch the Video Tutorial](#watch-the-video-tutorial)
 
 ## Introduction
 
-This project serves as a comprehensive guide to building an end-to-end data engineering pipeline. It covers each stage from data ingestion to processing and finally to storage, utilizing a robust tech stack that includes Apache Airflow, Python, Apache Kafka, Apache Zookeeper, Apache Spark, and Cassandra. Everything is containerized using Docker for ease of deployment and scalability.
+This project demonstrates a robust, end-to-end real-time data pipeline solution, from data ingestion through processing to final storage. The system is containerized using **Docker** for easy scalability and deployment, leveraging industry-standard tools like **Apache Airflow**, **Kafka**, **Spark**, and **Cassandra**. The architecture supports real-time user data streaming with fault-tolerant processing and storage mechanisms, ensuring high availability and scalability.
 
 ## System Architecture
 
-![System Architecture](https://github.com/airscholar/e2e-data-engineering/blob/main/Data%20engineering%20architecture.png)
+![System Architecture](https://github.com/Kushal-kothari/Real-Time-Data-Ingestion-and-Stream-Processing-System/blob/main/Data%20engineering%20architecture.png)
 
-The project is designed with the following components:
+The data pipeline consists of the following key components:
 
-- **Data Source**: We use `randomuser.me` API to generate random user data for our pipeline.
-- **Apache Airflow**: Responsible for orchestrating the pipeline and storing fetched data in a PostgreSQL database.
-- **Apache Kafka and Zookeeper**: Used for streaming data from PostgreSQL to the processing engine.
-- **Control Center and Schema Registry**: Helps in monitoring and schema management of our Kafka streams.
-- **Apache Spark**: For data processing with its master and worker nodes.
-- **Cassandra**: Where the processed data will be stored.
+- **Data Source**: Fetches random user data through API.
+- **Apache Airflow**: Manages task orchestration and workflow automation.
+- **Apache Kafka & Zookeeper**: Provides real-time data streaming and synchronization across services.
+- **Apache Spark**: Handles data processing, including transformation and aggregation.
+- **Cassandra**: Serves as the storage for processed data.
+- **Docker**: Ensures easy deployment and management of all services in a containerized environment.
 
-## What You'll Learn
+## Key Features
 
-- Setting up a data pipeline with Apache Airflow
-- Real-time data streaming with Apache Kafka
-- Distributed synchronization with Apache Zookeeper
-- Data processing techniques with Apache Spark
-- Data storage solutions with Cassandra and PostgreSQL
-- Containerizing your entire data engineering setup with Docker
+- **End-to-End Pipeline**: From ingestion, processing, to storage, this system demonstrates an efficient data flow.
+- **Real-time Data Streaming**: Stream over **50,000 API requests per minute**, making it highly scalable.
+- **Distributed Architecture**: Leverages **Kafka** and **Spark** for processing and **Cassandra** for fault-tolerant data storage.
+- **Automation**: Managed by **Airflow**, ensuring an automated workflow with real-time updates.
 
-## Technologies
+## Technologies Used
 
-- Apache Airflow
-- Python
-- Apache Kafka
-- Apache Zookeeper
-- Apache Spark
-- Cassandra
-- PostgreSQL
-- Docker
+- **Apache Airflow** for orchestration
+- **Apache Kafka** and **Zookeeper** for real-time data streaming and synchronization
+- **Apache Spark** for distributed data processing
+- **Cassandra** for high-availability data storage
+- **PostgreSQL** for task management
+- **Docker** for containerization
 
 ## Getting Started
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/airscholar/e2e-data-engineering.git
+    git clone <your-repo-link>
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd e2e-data-engineering
+    cd realtime-data-streaming
     ```
 
-3. Run Docker Compose to spin up the services:
+3. Start the services using Docker Compose:
     ```bash
     docker-compose up
     ```
 
-For more detailed instructions, please check out the video tutorial linked below.
-
-## Watch the Video Tutorial
-
-For a complete walkthrough and practical demonstration, check out our [YouTube Video Tutorial](https://www.youtube.com/watch?v=GqAcTrqKcrY).
+For further details on the setup and execution, please check out the linked documentation within the project.
